@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win $500 Cash Prize</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Win $500 Cash Prize!</h1>
+        <img src="prize-image.jpg" alt="Win $500" class="prize-image">
+        <p id="winner-text">Someone just won $500!</p>
+    </div>
+    <script>
+        function updateWinner() {
+            document.getElementById('winner-text').innerText = "Another lucky winner just claimed $500!";
+            setTimeout(() => {
+                document.getElementById('winner-text').innerText = "Someone just won $500!";
+            }, 1000);
+        }
+        setInterval(updateWinner, 1000);
+    </script>
+</body>
+</html>
